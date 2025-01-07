@@ -17,8 +17,9 @@ export default function Home() {
       <Header />
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="py-16 px-4 md:px-6 lg:px-8 text-center bg-gradient-to-b from-background to-muted/20">
-          <div className="container mx-auto">
+        <section className="relative py-16 px-4 md:px-6 lg:px-8 text-center">
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background/50 pointer-events-none" />
+          <div className="container mx-auto relative">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 flex flex-col items-center gap-4">
               <div className="flex items-center gap-4">
                 <div className="relative w-16 h-16">
@@ -26,19 +27,19 @@ export default function Home() {
                     src="/images/Logo.jpg"
                     alt="FlipFluence Logo"
                     fill
-                    className="object-contain"
+                    className="object-contain rounded-lg shadow-lg"
                     priority
                   />
                 </div>
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-foreground">
+                <span className="text-foreground">
                   FlipFluence
                 </span>
               </div>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-foreground">
+              <span className="text-foreground">
                 Unlock Hidden Walmart Clearance Deals!
               </span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            <p className="text-xl mb-8 max-w-3xl mx-auto text-foreground/90">
               Join FlipFluence and discover <span className="font-semibold text-foreground">incredible deals like $399 TVs for $99</span>, 
               <span className="font-semibold text-foreground"> $300 vacuums for $47</span>, and even 
               <span className="font-semibold text-foreground"> penny items!</span> Get access to our exclusive tools and community.

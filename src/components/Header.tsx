@@ -36,7 +36,7 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-background shadow-sm">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center space-x-2">
@@ -45,11 +45,11 @@ export function Header() {
                 src="/images/Logo.jpg"
                 alt="FlipFluence Logo"
                 fill
-                className="object-contain"
+                className="object-contain rounded shadow-sm"
                 priority
               />
             </div>
-            <span className="hidden font-bold sm:inline-block">
+            <span className="hidden font-bold text-foreground sm:inline-block">
               FlipFluence
             </span>
           </Link>
@@ -60,7 +60,7 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium transition-colors hover:text-primary"
+                className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
                 onClick={(e) => handleNavClick(e, item.href)}
               >
                 {item.name}
@@ -73,7 +73,7 @@ export function Header() {
           <ThemeToggle />
           <div className="hidden md:block">
             <Link href="https://whop.com/flipfluence/?a=digitalartlab" target="_blank" rel="noopener noreferrer">
-              <Button>Join FlipFluence</Button>
+              <Button variant="default" className="font-semibold">Join FlipFluence</Button>
             </Link>
           </div>
 
@@ -86,13 +86,13 @@ export function Header() {
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right">
-                <nav className="flex flex-col space-y-4">
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <nav className="flex flex-col space-y-4 mt-6">
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="text-sm font-medium transition-colors hover:text-primary"
+                      className="text-base font-medium text-foreground/80 transition-colors hover:text-foreground px-2 py-1.5 rounded-md hover:bg-muted"
                       onClick={(e) => handleNavClick(e, item.href)}
                     >
                       {item.name}
@@ -103,8 +103,9 @@ export function Header() {
                     target="_blank" 
                     rel="noopener noreferrer"
                     onClick={() => setIsOpen(false)}
+                    className="mt-4"
                   >
-                    <Button className="w-full">Join FlipFluence</Button>
+                    <Button className="w-full font-semibold">Join FlipFluence</Button>
                   </Link>
                 </nav>
               </SheetContent>
