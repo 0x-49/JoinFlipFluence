@@ -80,7 +80,7 @@ export const VideoCarousel = () => {
               <h3 className="text-xl font-bold">{video.title}</h3>
               <p className="text-muted-foreground">{video.description}</p>
               <Link 
-                href="https://whop.com/flipfluence/" 
+                href="https://whop.com/flipfluence/?a=digitalartlab" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"
@@ -120,7 +120,7 @@ export const VideoCarousel = () => {
             </ul>
           </div>
           <Link 
-            href="https://whop.com/flipfluence/" 
+            href="https://whop.com/flipfluence/?a=digitalartlab" 
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -138,7 +138,7 @@ export const VideoCarousel = () => {
               <h3 className="text-xl font-bold">{lastVideo.title}</h3>
               <p className="text-muted-foreground">{lastVideo.description}</p>
               <Link 
-                href="https://whop.com/flipfluence/" 
+                href="https://whop.com/flipfluence/?a=digitalartlab" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"
