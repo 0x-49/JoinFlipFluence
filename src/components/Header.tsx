@@ -37,8 +37,9 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background shadow-sm">
-      <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-6">
+      <div className="container flex h-16 items-center">
+        {/* Logo */}
+        <div className="flex-shrink-0">
           <Link href="/" className="flex items-center space-x-2">
             <div className="relative h-10 w-10">
               <Image
@@ -53,9 +54,11 @@ export function Header() {
               FlipFluence
             </span>
           </Link>
+        </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex md:items-center md:space-x-6">
+        {/* Desktop Navigation - Centered */}
+        <nav className="hidden md:flex flex-1 items-center justify-center">
+          <div className="flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -66,10 +69,11 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-          </nav>
-        </div>
+          </div>
+        </nav>
 
-        <div className="flex items-center gap-4">
+        {/* Right side actions */}
+        <div className="flex items-center gap-4 flex-shrink-0">
           <ThemeToggle />
           <div className="hidden md:block">
             <Link href="https://whop.com/flipfluence/?a=digitalartlab" target="_blank" rel="noopener noreferrer">
