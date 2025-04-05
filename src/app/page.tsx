@@ -40,9 +40,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-xl mb-8 max-w-3xl mx-auto text-foreground/90">
-              Join FlipFluence and discover <span className="font-semibold text-foreground">incredible deals like $399 TVs for $99</span>, 
-              <span className="font-semibold text-foreground"> $300 vacuums for $47</span>, and even 
-              <span className="font-semibold text-foreground"> penny items!</span> Get access to our exclusive tools and community.
+              Join FlipFluence, the premier <span className="font-semibold text-foreground">reselling community</span>, and discover <span className="font-semibold text-foreground">hidden Walmart clearance deals</span> like $399 TVs for $99, $300 vacuums for $47, and even <span className="font-semibold text-foreground">penny items</span>! Master <span className="font-semibold text-foreground">retail arbitrage</span> and <span className="font-semibold text-foreground">online arbitrage</span> with access to our exclusive <span className="font-semibold text-foreground">deal-finding tools</span>, expert strategies, and supportive community focused on <span className="font-semibold text-foreground">money-making opportunities</span>.
             </p>
             <Link 
               href="https://whop.com/flipfluence/?a=digitalartlab"
@@ -116,46 +114,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="border-t">
-          <div className="container mx-auto px-4 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div>
-                <h3 className="font-semibold mb-4">About FlipFluence</h3>
-                <p className="text-sm text-muted-foreground">
-                  FlipFluence helps you discover hidden clearance deals at Walmart and other retailers. 
-                  Our community of deal finders shares tips, tricks, and real-time alerts to help you save big.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold mb-4">Quick Links</h3>
-                <ul className="space-y-2 text-sm">
-                  <li><a href="#features" className="text-muted-foreground hover:text-primary">Features</a></li>
-                  <li><a href="#testimonials" className="text-muted-foreground hover:text-primary">Success Stories</a></li>
-                  <li><a href="#faq" className="text-muted-foreground hover:text-primary">FAQ</a></li>
-                  <li><Link href="/privacy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-semibold mb-4">Join FlipFluence</h3>
-                <Link 
-                  href="https://whop.com/flipfluence/?a=digitalartlab"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button className="w-full">
-                    Start Saving Now! 🎯
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
-              <p> 2025 FlipFluence. All rights reserved.</p>
-              <p className="mt-2">Affiliate Disclosure: Some links may earn us a commission.</p>
-            </div>
-          </div>
-        </footer>
       </main>
+      {/* Footer is now handled by RootLayout (src/app/layout.tsx) */}
     </>
   );
 }

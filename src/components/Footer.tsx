@@ -69,7 +69,7 @@ export function Footer() {
             <h3 className="text-lg font-semibold">Legal</h3>
             <div className="flex flex-col space-y-2">
               <Link 
-                href="/privacy-policy"
+                href="/privacy"
                 className="text-foreground/80 hover:text-foreground transition-colors"
               >
                 Privacy Policy

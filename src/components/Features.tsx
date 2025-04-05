@@ -3,23 +3,43 @@ import React from 'react'
 const features = [
   {
     title: '200-Mile Radius Search',
-    description: 'Find hidden clearance deals at any Walmart store within 200 miles of your location',
-    icon: '🎯'
+    description: 'Check hidden clearance prices & estimated stock at Walmart stores within 200 miles. Plan efficient sourcing trips!',
+    icon: '🗺️' // Changed icon
   },
   {
-    title: 'Real-Time Stock Alerts',
-    description: 'Get instant notifications when new hidden clearance deals are discovered near you',
+    title: 'Real-Time Deal Alerts',
+    description: 'Instant notifications via Discord for verified hidden clearance, price errors, and massive markdowns discovered by our team & community.',
     icon: '🔔'
   },
-  {
-    title: 'Expert Deal Guidance',
-    description: 'Our moderators help you locate the exact items and verify clearance prices',
-    icon: '👥'
+   {
+    title: 'Verification Tools',
+    description: 'Proprietary systems help verify stock levels and prices before you go, minimizing wasted trips and maximizing efficiency.',
+    icon: '✅' // New Feature
   },
   {
-    title: 'Massive Savings',
-    description: 'Members regularly save 50-90% off retail prices on TVs, tools, vacuums, and more',
-    icon: '💰'
+    title: 'Penny Deal Finder',
+    description: 'Get alerted to ultra-rare penny items - products ringing up for just $0.01 due to inventory glitches.',
+    icon: '🪙' // New Feature
+  },
+  {
+    title: 'Thriving Community',
+    description: 'Access our active Discord server for knowledge sharing, peer support, strategy discussions, and celebrating wins together.',
+    icon: '💬' // New Feature
+  },
+  {
+    title: 'Expert Guidance & Support',
+    description: 'Knowledgeable moderators verify deals, answer questions, and provide support. Access detailed guides and optional 1-on-1 onboarding.',
+    icon: '🧑‍🏫' // Enhanced description & icon
+  },
+  {
+    title: 'Reselling Education',
+    description: 'Learn effective retail & online arbitrage strategies for platforms like Amazon and eBay to turn deals into profit.',
+    icon: '📈' // New Feature
+  },
+  {
+    title: 'Massive Savings Potential',
+    description: 'Unlock deals saving 50-90%+ off retail on high-value items like electronics, tools, home goods, and more.',
+    icon: '💰' // Enhanced title
   }
 ]
 

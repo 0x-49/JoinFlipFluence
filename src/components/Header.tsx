@@ -18,6 +18,7 @@ const navigation = [
   { name: 'Features', href: '/#features', scroll: true },
   { name: 'Success Stories', href: '/#testimonials', scroll: true },
   { name: 'FAQ', href: '/#faq', scroll: true },
+  { name: 'Blog', href: '/blog' },
 ]
 
 export function Header() {
@@ -43,7 +44,7 @@ export function Header() {
           <Link href="/" className="flex items-center space-x-2">
             <div className="relative h-10 w-10">
               <Image
-                src="/images/Logo.jpg"
+                src="https://landing-page-images-seo.s3.eu-north-1.amazonaws.com/flipfluence.jpg"
                 alt="FlipFluence Logo"
                 fill
                 className="object-contain rounded shadow-sm"

@@ -3,18 +3,22 @@ import { Check, X } from 'lucide-react'
 
 const comparisonData = {
   regular: [
-    'Limited to local store deals',
-    'No way to verify clearance prices',
-    'Miss out on hidden deals',
-    'Waste time searching manually',
-    'No community support'
+    'Limited to deals in your immediate local store',
+    'Relying on inaccurate shelf tags',
+    'Miss out on hidden clearance & penny deals',
+    'Hours wasted manually searching & scanning',
+    'No visibility into stock levels elsewhere',
+    'Isolated effort, no community insights',
+    'Learning curve through trial and error'
   ],
   flipfluence: [
-    '200-mile radius deal search',
-    'Real-time price verification',
-    'Access to hidden clearance deals',
-    'Instant alerts for new deals',
-    'Expert moderator support'
+    '200-mile radius search for Walmart deals',
+    'Price & stock verification tools',
+    'Access verified hidden deals & penny items',
+    'Real-time Discord alerts save you time',
+    'Plan efficient sourcing trips with data',
+    'Thriving community support & knowledge sharing',
+    'Reselling education & expert guidance'
   ]
 }
 

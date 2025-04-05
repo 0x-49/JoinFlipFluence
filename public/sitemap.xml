@@ -12,4 +12,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://joinflipfluence.com/blog</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://joinflipfluence.com/blog/how-to-find-hidden-walmart-clearance-deals</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://joinflipfluence.com/blog/retail-arbitrage-strategies</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://joinflipfluence.com/terms</loc>
+    <lastmod>2025-04-05</lastmod> <!-- Use today's date -->
+    <changefreq>yearly</changefreq> <!-- Terms likely don't change often -->
+    <priority>0.3</priority> <!-- Lower priority than main content -->
+  </url>
 </urlset>

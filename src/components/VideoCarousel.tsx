@@ -50,22 +50,45 @@ export const VideoCarousel = () => {
   const mainVideos = videos.slice(0, 4);
   const lastVideo = videos[4];
 
-  const VideoEmbed = ({ videoId }: { videoId: string }) => (
-    <div 
-      dangerouslySetInnerHTML={{ 
+  // Add title prop for accessibility
+  const VideoEmbed = ({ videoId, title }: { videoId: string; title: string }) => (
+    <div
+      dangerouslySetInnerHTML={{
         __html: `<div style="position:relative; width:100%; height:0px; padding-bottom:177.778%">
-          <iframe 
-            src="https://streamable.com/e/${videoId}?" 
-            frameborder="0" 
-            width="100%" 
-            height="100%" 
-            allowfullscreen 
-            style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;">
+          <iframe
+            src="https://streamable.com/e/${videoId}?"
+            frameborder="0"
+            width="100%"
+            height="100%"
+            allowfullscreen
+            style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"
+            title="${title.replace(/"/g, '&quot;')}" // Add title attribute and escape quotes
+            loading="lazy"> // Add lazy loading
           </iframe>
         </div>`
-      }} 
+      }}
     />
   );
+      {/* Add JSON-LD Schema for Videos */}
+      <script type="application/ld+json">
+        {JSON.stringify(videos.map(video => ({
+          "@context": "https://schema.org",
+          "@type": "VideoObject",
+          "name": video.title,
+          "description": video.description,
+          "thumbnailUrl": `https://cdn-cf-east.streamable.com/image/${video.url}.jpg`, // Assuming Streamable thumbnail pattern
+          "uploadDate": "2025-04-05", // Placeholder: Use actual upload date if available
+          "contentUrl": `https://streamable.com/${video.url}`, // URL of the video page
+          "embedUrl": `https://streamable.com/e/${video.url}` // URL for embedding
+          // "duration": "PTxMxS", // Optional: Add duration if known (ISO 8601 format)
+          // "interactionStatistic": { // Optional: Add view count etc. if available
+          //   "@type": "InteractionCounter",
+          //   "interactionType": { "@type": "WatchAction" },
+          //   "userInteractionCount": 12345 
+          // }
+        })))}
+      </script>
+
 
   return (
     <section className="py-16 px-4 md:px-6 lg:px-8">
@@ -75,7 +98,7 @@ export const VideoCarousel = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto mb-16">
         {mainVideos.map((video, index) => (
           <Card key={video.id} className="p-4 space-y-4">
-            <VideoEmbed videoId={video.url} />
+            <VideoEmbed videoId={video.url} title={video.title} />
             <div className="space-y-3">
               <h3 className="text-xl font-bold">{video.title}</h3>
               <p className="text-muted-foreground">{video.description}</p>
@@ -133,7 +156,7 @@ export const VideoCarousel = () => {
         {/* Right featured video */}
         <div className="lg:col-span-2">
           <Card className="p-4 space-y-4 h-full">
-            <VideoEmbed videoId={lastVideo.url} />
+            <VideoEmbed videoId={lastVideo.url} title={lastVideo.title} />
             <div className="space-y-3">
               <h3 className="text-xl font-bold">{lastVideo.title}</h3>
               <p className="text-muted-foreground">{lastVideo.description}</p>
